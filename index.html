@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Archean Ocean</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        .container-fluid {
+            padding-top: 3rem;
+        }
+        /*#pageBg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background-image: linear-gradient(#99c0ff, #1f2e47)
+        }*/
+        body {
+            color: black;
+        }
+        .card, .list-group {
+            color: black !important;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('a').on('click', function(event) {    // smooth scroll
+                if (this.hash !== '') {
+                    var hash = this.hash;
+                    var scrollPos = $(hash).offset().top - 50;
+                    scrollPos = (scrollPos < 0) ? 0 : scrollPos;
+                    $('html, body').animate({
+                        scrollTop: scrollPos
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- <canvas id="pageBg"></canvas> -->
+    <nav id="archeanNav" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Archean Oceans</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#archeanNavbarItems" aria-controls="archeanNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="archeanNavbarItems">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#pageIntro">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pageCond">Conditions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pageEarlyLife">Early Life</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pageEnd">Beyond</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br/>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1 id="pageIntro">Overview</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>
+                    Archean oceans are significant to the development of both the Earth, and the evolution of life itself. 
+                    This period of time is so far into the past that it is often difficult to ascertain the exact conditions that existed. 
+                    However, this is not to say that it is impossible to gain an understanding of what this environment was like. 
+                    In fact, surviving rocks from this eon provide clues as to what these areas were like.
+                    Further, micro-fossils and stromatolites exist which can help identify early organisms which likely existed during this time<sup><a href="#stromEvidence">9</a></sup>.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 id="pageCond">Conditions</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>
+                    The Earth during the Archean eon was quite different from what we are accustomed to today. For one thing, species who rely on oxygen (like us)
+                    would find the environment most hostile. This is because the atmosphere was not anywhere near as oxyginated as it is today. In fact, if you were to
+                    go back in time to the Archean, you would be more likely to be breathing toxic gases such as methane or ammonia than you would oxygen <sup><a href="#berkeleyArchean">1</a></sup>. 
+                    Still, the early ocean environment of this time in Earth's history provided the opportunity for life to spring forth.
+                </p>
+                <p>
+                    In addition to the oxygen-poor environment, ocean temperature and volume was also much higher compared to modern day. 
+                    Estimates of the temperature of the oceans at the time can even go as high as 167<sup>o</sup>F or 185<sup>o</sup>F<sup><a href="#nasaTemps">2</a></sup>!
+                    It is possible that higher temperatures were maintained in part due to the composition of the atmosphere at the time, particularly an abundance in greenhouse gases<sup><a href="#youngEarth">3</a></sup>.
+                    In a similar extreme, it is speculated that ocean volume could have been as much as twice what it is today<sup><a href="#youngEarth">3</a></sup>.
+                    A more familiar feature of the Archean oceans may be hydrothermal vents. These vents have been frequently proposed as likely candidates for early habitats of life<sup><a href="#hydroTherm">4</a></sup>.
+                </p>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="./resources/images/Archean.png" width="500" height="300" alt="ocean conditions image">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Artist rendition of the Archean. This image is used unmodified with credit to <a href="https://commons.wikimedia.org/wiki/User:Triangulum">Tim Bertelink</a>, 
+                            the original can be found <a href="https://commons.wikimedia.org/wiki/File:Archean.png">here</a>.
+                            (<a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">license</a>)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 id="pageEarlyLife">Early Life in the Archean Oceans</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top img-fluid" src="./resources/images/Stromatolites.jpg" width="500" height="300" alt="Stromatolites image">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Stromatolites fossil. This image is used unmodified with credit to <a href="https://commons.wikimedia.org/wiki/User:Archaeodontosaurus">Didier Descouens</a>, 
+                            the original can be found <a href="https://commons.wikimedia.org/wiki/File:Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg">here</a>.
+                            (<a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode">license</a>)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <p>
+                    Some of the oldest indications of life come from the Archeon eon of Earth's history, with evidence from the ocean being particularly important. 
+                    Notably, there are traces of life which can be found in the form of micro-fossils<sup><a href="#berkeleyArchean">1</a></sup>.
+                    Fossils such as these go back as far as 3.5 billion years in the past<sup><a href="#berkeleyArchean">1</a></sup>. However, there is potential evidence that is even older.
+                    There is some indication that Graphite found in rocks that are over 3.7 billion years old may have been the result of biological activity <sup><a href="#japanGeosci">5</a></sup>.
+                    This highlights the importance of this time, in relevance to the emergence of life on Earth.
+                </p>
+                <p>
+                    While there exist several hypotheses as to the origin of life on Earth, a particularly intriguing proposal is that it arose around hydrothermal vents<sup><a href="#youngEarth">3</a></sup><sup><a href="#hydroTherm">4</a></sup>.
+                    Essentially, the oceans of the early Archean would have seen hydrothermal vents which provided an environment that was highly <abbr title="pH of 9-11">alkaline</abbr>, with significant levels of Hydrogen<sup><a href="#youngEarth">3</a></sup>.
+                    It is proposed that environments like these could have been important to the emergence of life<sup><a href="#hydroTherm">4</a></sup>. This further underscores why the Earth's early oceans are fascinating, they were likely home to biology at its youngest age.
+                </p>
+                <p>
+                    A no less important piece to the puzzle that is early life, in marine environments, comes in the form of stromatolites<sup><a href="#lifeFirst2">6</a></sup>.
+                    In order to make it clear why that is, it is vital to discuss cyanobacteria. Essentially, cyanobacteria are a type of bacteria which dwell in marine environments and survive via photosynthesis<sup><a href="#berkleyCyano">7</a></sup>. 
+                    As previously mentioned, the atmosphere of the Archeon was not oxyginated, like it is today. As such, photosynthesis from cyanobacterial colonies would deplete carbon dioxide from nearby water, leading to the precipitation
+                    of calcium carbonate<sup><a href="#berkleyStrom">8</a></sup>. Finally, these precipitations formed distinctive layers which can be preserved, providing evidence for the organism's presence<sup><a href="#berkleyStrom">8</a></sup>.
+                </p>
+                <p>
+                    Still, it is important to note that obtaining clear evidence of life from this period of time is very difficult. In fact, there is some indication that anoxygenic photosynthetic bacteria could also have produced stromatolites<sup><a href="#lifeFirst2">6</a></sup>. 
+                    Essentially, it is not a simple matter to attribute what is observed to a particular organism or process. 
+                    In addition, definitive micro-fossils are quite rare. Some of the more clear fossils from the oceans of the Archean come in the form of microscopic speroidal structures produced from hydrothermal activity<sup><a href="#lifeFirst2">6</a></sup>.
+                    More specifically, structures from hydrothermal activity, found in chert, can be compared to similar organic structures from the Proterozoic in search of correlation<sup><a href="#lifeFirst2">6</a></sup>. 
+                    Though the evidence for life during this time is not as cut-and-dry as fossilized bones, it does still exist.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 id="pageEnd">Beyond</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>
+                    While the oceans of the Archean may have been quite different to what is observed today, nothing would be same without this significant environment. 
+                    Perhaps most important, is the development of life in these ancient waters. The reason for this is the development of photosynthesis in cyanobacteria. 
+                    It is argued that the arrival of oxygenic photosynthesis may have come during the late Archean, thus providing a vital source of oxygen for the future 
+                    atmosphere of the Earth<sup><a href="#youngEarth">3</a></sup>. It is therefore of endless interest to the people of today to decipher exactly what the 
+                    conditions were like which led to this development, and how they may have directly influenced other aspects of Earth as it is now.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <hr/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 id="pageRef">References</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>The following are sources this page draws information from. Please click on the icons to open them in a new tab.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span id="berkeleyArchean">1. The Archean Eon and the Hadean</span>
+                        <a class="d-print-none" href="https://ucmp.berkeley.edu/precambrian/archean_hadean.php" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="https://ucmp.berkeley.edu/precambrian/archean_hadean.php">https://ucmp.berkeley.edu/precambrian/archean_hadean.php</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span id="nasaTemps">2. How Hot Were the Oceans When Life First Evolved?</span>
+                        <a class="d-print-none" href="https://astrobiology.nasa.gov/news/how-hot-were-the-oceans-when-life-first-evolved/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="https://astrobiology.nasa.gov/news/how-hot-were-the-oceans-when-life-first-evolved/">https://astrobiology.nasa.gov/news/how-hot-were-the-oceans-when-life-first-evolved/</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span id="youngEarth">3. Processes on the Young Earth and the Habitats of Early Life</span>
+                        <a class="d-print-none" href="https://doi.org/10.1146/annurev-earth-042711-105316" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="https://doi.org/10.1146/annurev-earth-042711-105316">https://doi.org/10.1146/annurev-earth-042711-105316</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span id="hydroTherm">4. Highly alkaline, high-temperature hydrothermal fluids in the early Archean ocean</span>
+                        <a class="d-print-none" href="https://doi.org/10.1016/j.precamres.2010.08.011" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="https://doi.org/10.1016/j.precamres.2010.08.011">https://doi.org/10.1016/j.precamres.2010.08.011</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span id="japanGeosci">5. The oldest remnant of life in 3.8 Ga old early Archaean rocks</span>
+                        <a class="d-print-none" href="http://www2.jpgu.org/meeting/2014/session/U-05_e.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="http://www2.jpgu.org/meeting/2014/session/U-05_e.html">http://www2.jpgu.org/meeting/2014/session/U-05_e.html</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span id="lifeFirst2">6. Life: the first two billion years</span>
+                        <a class="d-print-none" href="http://dx.doi.org/10.1098/rstb.2015.0493" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="http://dx.doi.org/10.1098/rstb.2015.0493">http://dx.doi.org/10.1098/rstb.2015.0493</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span id="berkleyCyano">7. Introduction to the Cyanobacteria</span>
+                        <a class="d-print-none" href="https://ucmp.berkeley.edu/bacteria/cyanointro.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="https://ucmp.berkeley.edu/bacteria/cyanointro.html">https://ucmp.berkeley.edu/bacteria/cyanointro.html</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span id="berkleyStrom">8. Cyanobacteria: Fossil Record</span>
+                        <a class="d-print-none" href="https://ucmp.berkeley.edu/bacteria/cyanofr.html" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="https://ucmp.berkeley.edu/bacteria/cyanofr.html">https://ucmp.berkeley.edu/bacteria/cyanofr.html</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span id="stromEvidence">9. Evidence of Archean life: Stromatolites and microfossils</span>
+                        <a class="d-print-none" href="https://doi.org/10.1016/j.precamres.2007.04.009" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a class="d-none d-print-block" href="https://doi.org/10.1016/j.precamres.2007.04.009">https://doi.org/10.1016/j.precamres.2007.04.009</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-auto">
+                    <p><small>Written by Cristopher Hernandez in 2019 for GEOL-201L</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
