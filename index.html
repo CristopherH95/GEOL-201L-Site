@@ -14,20 +14,14 @@
         .container-fluid {
             padding-top: 3rem;
         }
-        /*#pageBg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            background-image: linear-gradient(#99c0ff, #1f2e47)
-        }*/
         body {
             color: black;
         }
-        .card, .list-group {
-            color: black !important;
+        .list-group-item.active > a {
+            color: white;
+        }
+        .list-group-item.active > a:hover {
+            color: gray;
         }
     </style>
     <script>
@@ -42,13 +36,14 @@
                     }, 800, function() {
                         window.location.hash = hash;
                     });
+                    $('.list-group-item > span').parent().removeClass('active');
+                    $('.list-group-item > span' + hash).parent().addClass('active');
                 }
             });
         });
     </script>
 </head>
 <body>
-    <!-- <canvas id="pageBg"></canvas> -->
     <nav id="archeanNav" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
         <a class="navbar-brand" href="#">Archean Oceans</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#archeanNavbarItems" aria-controls="archeanNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +78,7 @@
         <div class="row">
             <div class="col">
                 <p>
-                    Archean oceans are significant to the development of both the Earth, and the evolution of life itself. 
+                    Archean oceans are significant to the development of both the Earth and the evolution of life itself. 
                     This period of time is so far into the past that it is often difficult to ascertain the exact conditions that existed. 
                     However, this is not to say that it is impossible to gain an understanding of what this environment was like. 
                     In fact, surviving rocks from this eon provide clues as to what these areas were like.
@@ -105,12 +100,11 @@
             <div class="col">
                 <p>
                     The Earth during the Archean eon was quite different from what we are accustomed to today. For one thing, species who rely on oxygen (like us)
-                    would find the environment most hostile. This is because the atmosphere was not anywhere near as oxyginated as it is today. In fact, if you were to
-                    go back in time to the Archean, you would be more likely to be breathing toxic gases such as methane or ammonia than you would oxygen <sup><a href="#berkeleyArchean">1</a></sup>. 
+                    would find the environment most hostile. This is because the atmosphere was not anywhere near as oxygenated as it is today. In fact, if you were to go back in time to the Archean, you would be more likely to be breathing toxic gases such as methane or ammonia than you would oxygen <sup><a href="#berkeleyArchean">1</a></sup>. 
                     Still, the early ocean environment of this time in Earth's history provided the opportunity for life to spring forth.
                 </p>
                 <p>
-                    In addition to the oxygen-poor environment, ocean temperature and volume was also much higher compared to modern day. 
+                    In addition to the oxygen-poor environment, ocean temperature and volume were also much higher compared to the modern day. 
                     Estimates of the temperature of the oceans at the time can even go as high as 167<sup>o</sup>F or 185<sup>o</sup>F<sup><a href="#nasaTemps">2</a></sup>!
                     It is possible that higher temperatures were maintained in part due to the composition of the atmosphere at the time, particularly an abundance in greenhouse gases<sup><a href="#youngEarth">3</a></sup>.
                     In a similar extreme, it is speculated that ocean volume could have been as much as twice what it is today<sup><a href="#youngEarth">3</a></sup>.
@@ -118,7 +112,7 @@
                 </p>
             </div>
             <div class="col-md-3">
-                <div class="card">
+                <div class="card bg-light">
                     <img class="card-img-top img-fluid" src="./resources/images/Archean.png" width="500" height="300" alt="ocean conditions image">
                     <div class="card-body">
                         <p class="card-text">
@@ -142,7 +136,7 @@
         </div>
         <div class="row">
             <div class="col-md-3">
-                <div class="card">
+                <div class="card bg-light">
                     <img class="card-img-top img-fluid" src="./resources/images/Stromatolites.jpg" width="500" height="300" alt="Stromatolites image">
                     <div class="card-body">
                         <p class="card-text">
@@ -175,7 +169,7 @@
                 <p>
                     Still, it is important to note that obtaining clear evidence of life from this period of time is very difficult. In fact, there is some indication that anoxygenic photosynthetic bacteria could also have produced stromatolites<sup><a href="#lifeFirst2">6</a></sup>. 
                     Essentially, it is not a simple matter to attribute what is observed to a particular organism or process. 
-                    In addition, definitive micro-fossils are quite rare. Some of the more clear fossils from the oceans of the Archean come in the form of microscopic speroidal structures produced from hydrothermal activity<sup><a href="#lifeFirst2">6</a></sup>.
+                    In addition, definitive micro-fossils are quite rare. Some of the more clear fossils from the oceans of the Archean come in the form of microscopic spheroidal structures produced from hydrothermal activity<sup><a href="#lifeFirst2">6</a></sup>.
                     More specifically, structures from hydrothermal activity, found in chert, can be compared to similar organic structures from the Proterozoic in search of correlation<sup><a href="#lifeFirst2">6</a></sup>. 
                     Though the evidence for life during this time is not as cut-and-dry as fossilized bones, it does still exist.
                 </p>
@@ -194,11 +188,14 @@
         <div class="row">
             <div class="col">
                 <p>
-                    While the oceans of the Archean may have been quite different to what is observed today, nothing would be same without this significant environment. 
+                    While the oceans of the Archean may have been quite different from what is observed today, nothing would be the same without this significant environment. 
                     Perhaps most important, is the development of life in these ancient waters. The reason for this is the development of photosynthesis in cyanobacteria. 
-                    It is argued that the arrival of oxygenic photosynthesis may have come during the late Archean, thus providing a vital source of oxygen for the future 
-                    atmosphere of the Earth<sup><a href="#youngEarth">3</a></sup>. It is therefore of endless interest to the people of today to decipher exactly what the 
-                    conditions were like which led to this development, and how they may have directly influenced other aspects of Earth as it is now.
+                    It is argued that the arrival of oxygenic photosynthesis may have come during the late Archean, thus providing a vital source of oxygen for the future atmosphere of the Earth<sup><a href="#youngEarth">3</a></sup>. It is therefore of endless interest to the people of today to decipher exactly what the conditions were like which led to this development, and how they may have directly influenced other aspects of Earth as it is now.
+                </p>
+                <p>
+                    For those who wish to see a small hint of what life of the distant past looked like, there does exist some hope. Modern stromatolites do exist today.
+                    They can be found in areas such as the <a href="https://www.sharkbay.org/place/hamelin-pool/">Hameline Pool Marine Nature Reserve</a>. 
+                    While these specimens may not tell the exact conditions of the oceans and ocean life during the Archean, the fact that organisms similar those that lived so long ago still exist is incredible.
                 </p>
             </div>
         </div>
